@@ -13,8 +13,8 @@ namespace Projet
             int opc;
             do
             {
-                Console.WriteLine("[1] - O");
-                Console.WriteLine("[2] ");
+                Console.WriteLine("[1] - Mensagem Boas Vindas");
+                Console.WriteLine("[2] - Primeiro e Último Nome");
                 Console.WriteLine("[3] ");
                 Console.WriteLine("[4] ");
                 Console.WriteLine("[5] ");
@@ -25,10 +25,13 @@ namespace Projet
                 switch (opc)
                 {
                     case 1:
-                        mensagemBoasVindas();
+                        welcomeMsg();
                         break;
-                    default:
-                        saiPrograma();
+                    case 2:
+                        firstLastName();
+                        break;
+                    case 3:
+                        topString();
                         break;
                 }
                 Console.ReadKey();
@@ -43,17 +46,51 @@ namespace Projet
             Console.WriteLine("Saiu do programa. Clique qualquer tecla para fechar...");
         }
 
-        private static void mensagemBoasVindas()
+        private static void welcomeMsg()
         {
-            Console.WriteLine("Digite o seu nome: ");
-            string nome = Console.ReadLine();
+            Console.WriteLine("Digite o seu primeiro nome: ");
+            string firstName = Console.ReadLine();
             // https://docs.microsoft.com/en-us/dotnet/csharp/how-to/search-strings
-            bool endsWithSearchResult = nome.EndsWith("eu", System.StringComparison.CurrentCultureIgnoreCase);
+            bool endsWithSearchResult = firstName.EndsWith("eu", System.StringComparison.CurrentCultureIgnoreCase);
  
-            if (nome == "Bartolomeu" || endsWithSearchResult)
-                Console.WriteLine("Olá " + nome + "! " + "Dá cá o meu!");
+            if (firstName == "Bartolomeu" || endsWithSearchResult)
+                Console.WriteLine("Olá " + firstName + "! " + "Dá cá o meu!");
             else   
-                Console.WriteLine("Olá " + nome + "!");
+                Console.WriteLine("Olá " + firstName + "!");
+
+            Console.WriteLine("Prima qualquer tecla para voltar ao menu...");
+
         }
+
+        private static void firstLastName()
+        {
+            Console.WriteLine("Digite o seu nome completo: ");
+            string fullName = Console.ReadLine();
+
+
+            string firstName = fullName.Split(' ').First();
+            string lastName = fullName.Split(' ').Last();
+  
+
+            Console.WriteLine("Olá " + firstName + " " + lastName + ".");
+
+            Console.WriteLine("Prima qualquer tecla para voltar ao menu...");
+
+        }
+
+        private static void topString()
+        {
+            
+
+            Console.WriteLine("Quantas strings deseja adicionar? ");
+            int n = Console.ReadLine();
+
+
+            Console.WriteLine("Prima qualquer tecla para voltar ao menu...");
+
+
+        }
+
+
     }
 }
