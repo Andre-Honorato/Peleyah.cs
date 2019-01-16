@@ -41,7 +41,8 @@ namespace Projet
                 Console.WriteLine("| [11] - String Só números? - [J.]                     |");
                 Console.WriteLine("| [12] - Topo ordem alfabética - [K.]                  |");
                 Console.WriteLine("| [13] - 10 Nomes - [L.]                               |");
-                Console.WriteLine("| [14] - Quiz - [L.]                               |");
+                Console.WriteLine("| [14] - Quiz - []                                     |");
+                Console.WriteLine("| [15] - Palíndromo - []                               |");
                 Console.WriteLine("| [0] Sair do Programa                                 |");
                 Console.WriteLine("<------------------------------------------------------>");
                 Console.Write("Digite uma opção: ");
@@ -642,14 +643,17 @@ namespace Projet
             Console.WriteLine("\n Acertou " + c + " em 10.");
             Console.WriteLine("Prima qualquer tecla para voltar ao menu...");
 
-
         }
 
         public static void palindromo()
         {
             Console.WriteLine("Digite a string para verificar se é palíndromo:");
             string str = Console.ReadLine();
-
+            Console.WriteLine(str.Reverse().ToArray());
+            if (str.SequenceEqual(str.Reverse()))
+                Console.WriteLine("Palindromo");
+            else
+                Console.WriteLine("Não é palindromo");
             
 
 
