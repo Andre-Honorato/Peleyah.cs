@@ -66,6 +66,7 @@ namespace Projet
                         break;
                     case 6:
                         longerString(n, vec);
+                        Console.WriteLine("Prima qualquer tecla para voltar ao menu...");
                         break;
                     case 7:
                         if (!sameSizeStrings(n, vec))
@@ -178,7 +179,13 @@ namespace Projet
 
         private static void welcomeMsg()
         {
-            Console.WriteLine("Digite o seu primeiro nome: ");
+            //Crie um programa que leia o nome próprio do utilizador e imprima uma mensagem personalizada do
+            //    tipo: "Olá João!"
+            //Altere o programa de modo a que se o nome for "Bartolomeu", o programa imprima "Dá cá o meu!".
+            //Altere o programa anterior para que a mensagem surja para todos os nomes terminados em "eu".
+            //Exemplo:> Olá Zebedeu!Dá cá o meu!
+
+           Console.WriteLine("Digite o seu primeiro nome: ");
             string firstName = Console.ReadLine();
             // https://docs.microsoft.com/en-us/dotnet/csharp/how-to/search-strings
             bool endsWithSearchResult = firstName.EndsWith("eu", System.StringComparison.CurrentCultureIgnoreCase);
@@ -194,6 +201,9 @@ namespace Projet
 
         private static void firstLastName()
         {
+
+            // Altere o programa de modo a pedir o nome completo e apresentar apenas o primeiro e o último nome.
+
             Console.WriteLine("Digite o seu nome completo: ");
             string fullName = Console.ReadLine();
 
@@ -211,6 +221,9 @@ namespace Projet
         private static void longerString(int n, string[] vec)
         {
 
+            //Crie uma função que indique qual de três strings introduzidas pelo utilizador tem um comprimento
+            //superior.
+
             string biggestString = "";
 
             for (int i = 0; i < n; i++)
@@ -225,7 +238,7 @@ namespace Projet
 
 
             }
-
+            escreverVec(n, vec);
             Console.WriteLine("A string que tem o comprimento superior é " + biggestString + ".");
 
 
@@ -236,6 +249,9 @@ namespace Projet
 
         private static bool sameSizeStrings(int n, string[] vec)
         {
+            //Crie uma função que receba um vector de strings como argumento e retorne um valor booleano
+            //indicando se todas as strings têm o mesmo comprimento.
+
 
             int contStrings = 0;
 
@@ -257,6 +273,9 @@ namespace Projet
 
         private static int somaLenghts(int n, string[] vec)
         {
+            //Crie uma função que receba um vector de strings como argumento e retorne um valor inteiro
+            //correspondendo à soma de todos os comprimentos das strings.
+
 
             int somaLenghts = vec[0].Length;
 
@@ -273,6 +292,10 @@ namespace Projet
 
         private static void vbaom(int n, string[] vec)
         {
+
+            //Crie uma função que, numa string substitua todas as letras “v” por “b” e todas as ocorrências de “ão”
+            //por “om”.
+
 
             Console.WriteLine("Digite a string para ser convertida: ");
             string oldStr = Console.ReadLine();
@@ -312,59 +335,67 @@ namespace Projet
 
         private static bool justNumbers()
         {
-            {
-                Console.WriteLine("Digite a string:");
-                string str = Console.ReadLine();
-                double Num;
-                bool isNum = double.TryParse(str, out Num);
-                if (isNum)
-                    return true;
-                else
-                    return false;
-            }
+            //Crie uma função para verificar se uma string é constituída apenas por algarismos. A função deverá
+            //retornar um valor booleano true neste caso.
+
+
+            Console.WriteLine("Digite a string:");
+            string str = Console.ReadLine();
+            double Num;
+            bool isNum = double.TryParse(str, out Num);
+            if (isNum)
+                return true;
+            else
+                return false;
+            
 
         }
 
         private static bool stringJustNumbers(string str)
         {
-            {
+            //Crie uma função que receba uma string como argumento e retorne true se a string não contiver
+            //algarismos.
 
-                double Num;
-                bool isNum = double.TryParse(str, out Num);
-                if (isNum)
-                    return true;
-                else
-                    return false;
-            }
+            double Num;
+            bool isNum = double.TryParse(str, out Num);
+            if (isNum)
+                return true;
+            else
+                return false;
 
         }
 
         private static void twoStrings()
         {
 
-                Console.WriteLine("Digite a primeira string:");
-                string str1 = Console.ReadLine();
-                Console.WriteLine("Digite a segunda string:");
-                string str2 = Console.ReadLine();
+            //Crie uma função que leia 2 strings do utilizador e indique qual das strings está primeiro na ordem
+            //alfabética.
 
-                if(string.Compare(str1, str2) < 0)
-                {
-                    Console.WriteLine("A string " + str1 + " está no topo alfabeticamente");
-                }
-                if (string.Compare(str1, str2) > 0)
-                {
-                    Console.WriteLine("A string " + str2 + " está no topo alfabeticamente");
-                }
-                if (string.Compare(str1, str2) == 0)
-                {
-                    Console.WriteLine("As string estão empatadas");
-                }
+            Console.WriteLine("Digite a primeira string:");
+            string str1 = Console.ReadLine();
+            Console.WriteLine("Digite a segunda string:");
+            string str2 = Console.ReadLine();
+
+            if(string.Compare(str1, str2) < 0)
+            {
+                Console.WriteLine("A string " + str1 + " está no topo alfabeticamente");
+            }
+            if (string.Compare(str1, str2) > 0)
+            {
+                Console.WriteLine("A string " + str2 + " está no topo alfabeticamente");
+            }
+            if (string.Compare(str1, str2) == 0)
+            {
+                Console.WriteLine("As string estão empatadas");
+            }
             
 
         }
 
         public static void tenNames()
         {
+            //Crie uma função que leia 10 nomes para um vector de strings e os ordene alfabeticamente na saída.
+
             string[] vec = new string[10];
 
             for (int i = 0; i < 10; i++)
@@ -392,6 +423,9 @@ namespace Projet
 
         public static void quiz()
         {
+            //Crie um jogo com 10 advinhas do tipo "Qual a cor do cavalo branco do Napoleão?", cada uma com 3
+            //alternativas, apresentando o resultado final.
+
 
             int c = 0;
 
@@ -647,6 +681,9 @@ namespace Projet
 
         public static void palindromo()
         {
+            // Crie um programa para verificar se uma string é um palíndromo.
+
+
             Console.WriteLine("Digite a string para verificar se é palíndromo:");
             string str = Console.ReadLine();
             Console.WriteLine(str.Reverse().ToArray());
@@ -654,10 +691,6 @@ namespace Projet
                 Console.WriteLine("Palindromo");
             else
                 Console.WriteLine("Não é palindromo");
-            
-
-
-
 
         }
 
