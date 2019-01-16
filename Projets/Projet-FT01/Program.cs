@@ -57,12 +57,15 @@ namespace Projet
                         break;
                     case 3:
                         n = lerN();
+                        Console.WriteLine("Leitura Concluída! \nPrima qualquer tecla para voltar ao menu...");
                         break;
                     case 4:
                         vec = lerVec(n);
+                        Console.WriteLine("Leitura Concluída! \nPrima qualquer tecla para voltar ao menu...");
                         break;
                     case 5:
                         escreverVec(n, vec);
+                        Console.WriteLine("Escrita Concluída! \nPrima qualquer tecla para voltar ao menu...");
                         break;
                     case 6:
                         longerString(n, vec);

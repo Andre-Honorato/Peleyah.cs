@@ -1,4 +1,4 @@
-Credits: https://github.com/mikasonwar
+Credits: https://github.com/mikasonwar / https://github.com/atec-mikas
 
 git bash here
 
@@ -6,7 +6,7 @@ git bash here
 	git commit -m "mensagem de commit"
 	git push
 
-// necessario mas nao sempre
+// necessário mas não sempre
 
 	git pull
 	git status
