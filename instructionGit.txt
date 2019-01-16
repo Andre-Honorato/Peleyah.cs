@@ -6,7 +6,7 @@ git bash here
 	git commit -m "mensagem de commit"
 	git push
 
-// necessário mas não sempre
+// necessario mas nao sempre
 
 	git pull
 	git status

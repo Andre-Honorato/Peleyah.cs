@@ -42,7 +42,7 @@ namespace Projet
                 Console.WriteLine("| [12] - Topo ordem alfabética - [K.]                  |");
                 Console.WriteLine("| [13] - 10 Nomes - [L.]                               |");
                 Console.WriteLine("| [14] - Quiz - [M.]                                   |");
-                Console.WriteLine("| [15] - Palíndromo - [N.]                             |");
+                Console.WriteLine("| [15] - Palíndromo - [N.]                           |");
                 Console.WriteLine("| [0] Sair do Programa                                 |");
                 Console.WriteLine("<------------------------------------------------------>");
                 Console.Write("Digite uma opção: ");
@@ -96,11 +96,11 @@ namespace Projet
                     case 10:
                         if (justNumbers())
                         {
-                            Console.WriteLine("A string introduzida só contem números.");
+                            Console.WriteLine("A string introduzida só contem números.(TRUE)");
                         }
                         else
                         {
-                            Console.WriteLine("A string introduzida não contem apenas números.");
+                            Console.WriteLine("A string introduzida não contem apenas números.(FALSE)");
                         }
                         Console.WriteLine("Prima qualquer tecla para voltar ao menu...");
                         break;
@@ -109,11 +109,12 @@ namespace Projet
                         string str = Console.ReadLine();
                         if (stringJustNumbers(str))
                         {
-                            Console.WriteLine("A string introduzida só contem números.");
+                            Console.WriteLine("TRUE");
                         }
                         else
                         {
-                            Console.WriteLine("A string introduzida não contem apenas números.");
+                            Console.WriteLine("FALSE");
+                            
                         }
                         Console.WriteLine("Prima qualquer tecla para voltar ao menu...");
                         break;
@@ -300,10 +301,16 @@ namespace Projet
             //por “om”.
 
 
+
             Console.WriteLine("Digite a string para ser convertida: ");
             string oldStr = Console.ReadLine();
+
+            //oldStr.Replace("v", "b");
+            //oldStr.Replace("ão", "om");
+
             int posicaoV = oldStr.IndexOf("v");
             int posicaoAo = oldStr.IndexOf("ão");
+
             if (oldStr.IndexOf("v") != -1 && oldStr.IndexOf("ão") != -1)
             {
                 string newStr = oldStr.Remove(posicaoV, 1);
@@ -344,8 +351,8 @@ namespace Projet
 
             Console.WriteLine("Digite a string:");
             string str = Console.ReadLine();
-            double Num;
-            bool isNum = double.TryParse(str, out Num);
+
+            bool isNum = str.All(char.IsDigit);
             if (isNum)
                 return true;
             else
@@ -356,15 +363,18 @@ namespace Projet
 
         private static bool stringJustNumbers(string str)
         {
+
             //Crie uma função que receba uma string como argumento e retorne true se a string não contiver
             //algarismos.
 
-            double Num;
-            bool isNum = double.TryParse(str, out Num);
-            if (isNum)
+            bool isIntString = str.Any(char.IsDigit);
+            if (isIntString)
+            {
                 return true;
-            else
+            }else
+            {
                 return false;
+            }
 
         }
 
@@ -696,7 +706,6 @@ namespace Projet
                 Console.WriteLine("Não é palindromo");
 
         }
-
 
     }
 }
