@@ -41,8 +41,8 @@ namespace Projet
                 Console.WriteLine("| [11] - String Só números? - [J.]                     |");
                 Console.WriteLine("| [12] - Topo ordem alfabética - [K.]                  |");
                 Console.WriteLine("| [13] - 10 Nomes - [L.]                               |");
-                Console.WriteLine("| [14] - Quiz - []                                     |");
-                Console.WriteLine("| [15] - Palíndromo - []                               |");
+                Console.WriteLine("| [14] - Quiz - [M.]                                   |");
+                Console.WriteLine("| [15] - Palíndromo - [N.]                             |");
                 Console.WriteLine("| [0] Sair do Programa                                 |");
                 Console.WriteLine("<------------------------------------------------------>");
                 Console.Write("Digite uma opção: ");
