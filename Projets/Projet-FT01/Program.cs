@@ -305,8 +305,8 @@ namespace Projet
             Console.WriteLine("Digite a string para ser convertida: ");
             string oldStr = Console.ReadLine();
 
-            //oldStr.Replace("v", "b");
-            //oldStr.Replace("ão", "om");
+            //oldStr = oldStr.Replace("v", "b");
+            //old Str = oldStr.Replace("ão", "om");
 
             int posicaoV = oldStr.IndexOf("v");
             int posicaoAo = oldStr.IndexOf("ão");
