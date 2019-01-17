@@ -419,17 +419,15 @@ namespace Projet
 
             }
 
-           var sortedWords =
-           from w in vec
-           orderby w
-           select w;
+            Array.Sort(vec);
 
-            Console.WriteLine("String ordenada alfabeticamente:");
-            foreach (var w in sortedWords)
+            Console.WriteLine("String ordenada alfabeticamente: ");
+
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(w);
+                Console.WriteLine("String[" + (i + 1) + "]: ");
+                Console.WriteLine(vec[i]);
             }
-
 
 
         }

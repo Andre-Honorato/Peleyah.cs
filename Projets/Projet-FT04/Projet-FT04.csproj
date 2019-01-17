@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{36810EBD-F2A1-443C-883D-DA8F64403DB9}</ProjectGuid>
+    <ProjectGuid>{E75DF800-6563-42C9-AD60-2DF133DC227B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Projet_FT03</RootNamespace>
-    <AssemblyName>Projet-FT03</AssemblyName>
+    <RootNamespace>Projet_FT04</RootNamespace>
+    <AssemblyName>Projet-FT04</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data.cs" />
-    <Compile Include="Hora.cs" />
-    <Compile Include="Ponto.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="Gerente.cs" />
+    <Compile Include="Operario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reta.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

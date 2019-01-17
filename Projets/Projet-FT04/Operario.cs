@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projet_FT03
+namespace Projet_FT04
 {
-    class Funcionario
+    class Operario
     {
-        
-        private int id;
-        private string nome,eMail;
-
     }
 }
