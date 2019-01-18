@@ -13,7 +13,7 @@ namespace Projet_FT03
 
             Console.WriteLine("-----------------Data e Hora-----------------");
             Data dt1 = new Data(22,05,1998,6,12,50,40);
-            Data dt2 = new Data(17, 01, 2019,5, 21, 51, 50);
+            Data dt2 = new Data(17, 01, 2019,5, 22, 51, 50);
             Console.WriteLine("Data 1:" + dt1.toString());
             Console.WriteLine("Data 2:" + dt2.toString());
 
@@ -33,8 +33,8 @@ namespace Projet_FT03
             Console.WriteLine("-----------------Retas----------------");
             Reta rt1 = new Reta(pt1, pt2);
             Reta rt2 = new Reta(rt1);
-            Console.WriteLine("Reta 1: " + rt1.toString());
-            Console.WriteLine("Reta 2: " + rt2.toString());
+            Console.WriteLine("\nReta 1: " + rt1.toString());
+            Console.WriteLine("\n\tReta 2: " + rt2.toString());
 
             Console.ReadKey();
         }

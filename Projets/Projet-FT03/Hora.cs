@@ -90,15 +90,12 @@ namespace Projet_FT03
         }
         public int difEntre2Horas(Hora h)
         {
-            float[] dif = { 0, 0 };
-            dif[0] += segundo;
-            dif[0] += minuto * 60;
-            dif[0] += hora * 60 * 60;
-            dif[1] += h.segundo;
-            dif[1] += h.minuto * 60;
-            dif[1] += h.hora * 60 * 60;
+       
+            int segsHora1 = segundo + (minuto * 60) + (hora * 60 * 60); //calcular segundos hora 1
+            int segsHora2 = h.segundo + (h.minuto * 60) + (h.hora * 60 * 60); //calcular segundos hora 2
 
-            return int.Parse(Math.Round(Math.Abs((dif[0] - dif[1]) / (60 * 60))).ToString());
+
+            return (Math.Abs((segsHora1 - segsHora2) / (60 * 60))); //converter em horas
 
         }
 

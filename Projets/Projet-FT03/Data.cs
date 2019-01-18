@@ -41,7 +41,7 @@ namespace Projet_FT03
         }
 
 
-		public bool SetAno(int a)
+		public bool SetAno(int a)//Propz to Mr. , for more info check @mikasonwar
         {
             if (a < 1900)
             {
