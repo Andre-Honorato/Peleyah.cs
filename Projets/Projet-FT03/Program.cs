@@ -18,7 +18,7 @@ namespace Projet_FT03
             Console.WriteLine("Data 2:" + dt2.toString());
 
             Console.WriteLine("\nDiferença entre 2 horas: " + dt1.getHora().difEntre2Horas(dt2.getHora()));
-            Console.WriteLine("\n\tDiferença entre 2 anos: " + dt1.difEntre2anos(dt2));
+            Console.WriteLine("\n\tDiferença entre 2 anos: " + dt1.difEntre2Anos(dt2));
 
             Console.WriteLine("-----------------Pontos----------------");
 
@@ -26,15 +26,15 @@ namespace Projet_FT03
             Ponto pt2 = new Ponto(9, 10);
 
 
-            Console.WriteLine("\nPT1:" + pt1.toString());
-            Console.WriteLine("\n\tPT2:" + pt2.toString());
+            Console.WriteLine("\nPT1:" + pt1.ToString());
+            Console.WriteLine("\n\tPT2:" + pt2.ToString());
             Console.WriteLine("\n\t\tDistancia entre PT1 e PT2:"+pt1.distEntre2Pontos(pt2));
 
             Console.WriteLine("-----------------Retas----------------");
             Reta rt1 = new Reta(pt1, pt2);
             Reta rt2 = new Reta(rt1);
-            Console.WriteLine("\nReta 1: " + rt1.toString());
-            Console.WriteLine("\n\tReta 2: " + rt2.toString());
+            Console.WriteLine("\nReta 1: " + rt1.ToString());
+            Console.WriteLine("\n\tReta 2: " + rt2.ToString());
 
             Console.ReadKey();
         }

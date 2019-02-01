@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E28D8508-917E-49F5-9045-5282C9465670}</ProjectGuid>
+    <ProjectGuid>{E75DF800-6563-42C9-AD60-2DF133DC227B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Ficha_Trabalho_4</RootNamespace>
-    <AssemblyName>Ficha_Trabalho_4</AssemblyName>
+    <RootNamespace>Projet_FT04</RootNamespace>
+    <AssemblyName>Projet-FT04</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -42,12 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conta.cs" />
-    <Compile Include="Contacto.cs" />
-    <Compile Include="Contacto2.cs" />
     <Compile Include="Data.cs" />
-    <Compile Include="Empresa.cs" />
-    <Compile Include="Pessoa.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="Gerente.cs" />
+    <Compile Include="Operario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

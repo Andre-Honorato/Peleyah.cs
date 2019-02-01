@@ -43,9 +43,9 @@ namespace Projet_FT03
                     return new Ponto();
             }
         }
-        public string toString()
+        public override string ToString()
         {
-            return "Ponto 1: " + p1.toString() + " Ponto 2: " + p2.toString();
+            return "Ponto 1: " + p1.ToString() + " Ponto 2: " + p2.ToString();
         }
     }
 }

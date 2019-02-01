@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Ficha_Trabalho_4")]
+[assembly: AssemblyTitle("Projet-FT04")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Ficha_Trabalho_4")]
+[assembly: AssemblyProduct("Projet-FT04")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e28d8508-917e-49f5-9045-5282c9465670")]
+[assembly: Guid("e75df800-6563-42c9-ad60-2df133dc227b")]
 
 // Version information for an assembly consists of the following four values:
 //

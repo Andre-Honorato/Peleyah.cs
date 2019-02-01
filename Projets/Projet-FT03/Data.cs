@@ -22,12 +22,12 @@ namespace Projet_FT03
         }
         public Data(int d, int m, int a, int dia, int hor, int min, int seg)
         {
-            if (!SetAno(a))
-                ano = 2000;
-            if (!SetMes(m))
-                mes = 1;
             if (!SetDia(d))
-                dia = 1;
+                SetDia(01);
+            if (!SetMes(m))
+                SetMes(01);
+            if (!SetAno(a))
+                SetAno(2000);
             if (!SetDiaSemana(dia))
                 SetDiaSemana(1);
             this.hora = new Hora(hor, min, seg);
@@ -35,13 +35,23 @@ namespace Projet_FT03
 
         public Data(Data d)
         {
-            dia=d.ano;
-		    mes=d.mes;
-		    ano=d.dia;
+            dia = d.ano;
+            mes = d.mes;
+            ano = d.dia;
+        }
+
+        public Data(int d, int m, int a)
+        {
+            if (!SetDia(d))
+                SetDia(01);
+            if (!SetMes(m))
+                SetMes(01);
+            if (!SetAno(a))
+                SetAno(2000);
         }
 
 
-		public bool SetAno(int a)//Propz to Mr. , for more info check @mikasonwar
+        public bool SetAno(int a)//Propz to Mr. Mikasonwar, for more info check @mikasonwar or it's subsidiary @atec-mikas
         {
             if (a < 1900)
             {
@@ -56,84 +66,84 @@ namespace Projet_FT03
         }
         public bool SetMes(int m)
         {
-            if(m<=0 || m>12) {
-			return false; //Mes invalido
-		}
-		if(m<8 && m!=2) {
-			if(m%2==0 && dia<=30) {
-				mes=m;		
-			}
-			else {
-				if(m%2==1 && dia<=31) {
-					mes=m;
-				}
-				else {
-					return false;//Mes invalido devido ao dia
-				}
-			}
-		} else {
-			if(m>=8 && m!=2) {
-				if(m%2==1 && dia<=30) {
-					mes=m;		
-				}
-				else {
-					if(m%2==0 && dia<=31) {
-						mes=m;
-					}
-					else {
-						return false;//Mes invalido devido ao dia
-					}
-				}
-			}
-		}
-		if(m==2) {
-			if(ano%4==0 && dia<=29){
-				mes=m;
-			} else {
-				if(ano%4==1 && dia<=28){
-					mes=m;
-				} else {
-					return false;//Mes invalido devido ao dia e ano
-				}
-			}
-		}
-		return true;
-        }
-        public bool SetDia(int d)
-        {
-        if (d <= 0 || d > 31)
-        {
-            return false; //Dia invalido
-        }
-        if (mes < 8 && mes != 2)
-        {
-            if (mes % 2 == 0 && d <= 30)
+            if (m <= 0 || m > 12)
             {
-                dia = d;
+                return false; //Mes invalido
+            }
+            if (m < 8 && m != 2)
+            {
+                if (m % 2 == 0 && dia <= 30)
+                {
+                    mes = m;
+                }
+                else
+                {
+                    if (m % 2 == 1 && dia <= 31)
+                    {
+                        mes = m;
+                    }
+                    else
+                    {
+                        return false;//Mes invalido devido ao dia
+                    }
+                }
             }
             else
             {
-                if (mes % 2 == 1 && d <= 31)
+                if (m >= 8 && m != 2)
                 {
-                    dia = d;
-                }
-                else
-                {
-                    return false;//Dia invalido devido ao mes
+                    if (m % 2 == 1 && dia <= 30)
+                    {
+                        mes = m;
+                    }
+                    else
+                    {
+                        if (m % 2 == 0 && dia <= 31)
+                        {
+                            mes = m;
+                        }
+                        else
+                        {
+                            return false;//Mes invalido devido ao dia
+                        }
+                    }
                 }
             }
-        }
-        else
-        {
-            if (mes >= 8 && mes != 2)
+            if (m == 2)
             {
-                if (mes % 2 == 1 && d <= 30)
+                if (ano % 4 == 0 && dia <= 29)
+                {
+                    mes = m;
+                }
+                else
+                {
+                    if (ano % 4 == 1 && dia <= 28)
+                    {
+                        mes = m;
+                    }
+                    else
+                    {
+                        return false;//Mes invalido devido ao dia e ano
+                    }
+                }
+            }
+            return true;
+        }
+        public bool SetDia(int d)
+        {
+            if (d <= 0 || d > 31)
+            {
+                return false; //Dia invalido
+            }
+            if (mes < 8 && mes != 2)
+            {
+                if (mes % 2 == 0 && d <= 30)
                 {
                     dia = d;
                 }
                 else
                 {
-                    if (mes % 2 == 0 && d <= 31)
+                    if (mes % 2 == 1 && d <= 31)
                     {
                         dia = d;
                     }
@@ -143,27 +153,47 @@ namespace Projet_FT03
                     }
                 }
             }
-        }
-        if (mes == 2)
-        {
-            if (ano % 4 == 0 && d <= 29)
-            {
-                dia = d;
-            }
             else
             {
-                if (ano % 4 == 1 && d <= 28)
+                if (mes >= 8 && mes != 2)
+                {
+                    if (mes % 2 == 1 && d <= 30)
+                    {
+                        dia = d;
+                    }
+                    else
+                    {
+                        if (mes % 2 == 0 && d <= 31)
+                        {
+                            dia = d;
+                        }
+                        else
+                        {
+                            return false;//Dia invalido devido ao mes
+                        }
+                    }
+                }
+            }
+            if (mes == 2)
+            {
+                if (ano % 4 == 0 && d <= 29)
                 {
                     dia = d;
                 }
                 else
                 {
-                    return false;//Dia invalido devido ao ano e mes
+                    if (ano % 4 == 1 && d <= 28)
+                    {
+                        dia = d;
+                    }
+                    else
+                    {
+                        return false;//Dia invalido devido ao ano e mes
+                    }
                 }
             }
+            return true;
         }
-        return true;
-    }
         public bool SetDiaSemana(int dia)
         {
             switch (dia)
@@ -217,9 +247,9 @@ namespace Projet_FT03
         public string toString()
         {
             return ("Data:" + dia.ToString() + " / " + mes.ToString() + " / " + ano.ToString() + "\n\tHora: " + hora.toString());
-            
+
         }
-        public int difEntre2anos(Data d)
+        public int difEntre2Anos(Data d)
         {
             return d.ano - ano;
         }

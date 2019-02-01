@@ -47,13 +47,13 @@ namespace Projet_FT03
             this.y = y;
             return true;
         }
-        public string toString()
+        public override string ToString()
         {
-            return "(" + x.ToString() + "," + y.ToString() + ")";
+            return "(" + x.ToString() + " , " + y.ToString() + ")";
         }
         public double distEntre2Pontos(Ponto p)
         {
-            return (double)Math.Sqrt(Math.Pow((p.x - x), 2) + Math.Pow((p.y - y), 2));
+            return (double)Math.Sqrt(((p.x - x) * (p.x - x)) + ((p.y - y) * (p.y - y)));
         }
 
     }
