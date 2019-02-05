@@ -259,6 +259,7 @@ namespace Projet_FT05
             op = new Operario();
             Console.WriteLine("Digite o ID:");
             op.SetId((int)Ler((typeof(int))));
+            Console.WriteLine("Digite o Nome:");
             op.SetNome(Console.ReadLine());
             Console.WriteLine("Digite o E-mail:");
             op.SetEmail(Console.ReadLine());

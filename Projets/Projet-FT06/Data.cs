@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Projet_FT04
+namespace Projet_FT06
 {
     class Data
     {
@@ -35,7 +35,8 @@ namespace Projet_FT04
         public int Dia
         {
             get { return _dia; }
-            set {
+            set
+            {
                 if (_dia <= 0 || _dia > 31)
                 {
                     _dia = 1;  //Dia invalido
@@ -104,7 +105,8 @@ namespace Projet_FT04
         public int Ano
         {
             get { return _ano; }
-            set {
+            set
+            {
                 if (_ano < 1900)
                 {
                     _ano = 2000; //Ano invalido
@@ -150,7 +152,7 @@ namespace Projet_FT04
                     {
                         if (_mes % 2 == 1 && _dia <= 30)
                         {
-                           _mes = value;
+                            _mes = value;
                         }
                         else
                         {
@@ -186,10 +188,10 @@ namespace Projet_FT04
                 _mes = value;
             }
         }
-        
+
         public override string ToString()
         {
-            return ("Data: " + Dia + " / " + Mes+ " / " + Ano);
+            return ("Data: " + Dia + " / " + Mes + " / " + Ano);
         }
 
         public int DifEntre2anos(Data d)
