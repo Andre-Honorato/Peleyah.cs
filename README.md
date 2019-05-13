@@ -1,4 +1,4 @@
-## JSousa.cs, exercícios realizados durante a UFCF 5809 - Programação em C#
+## Coleção exercícios realizados durante a UFCF 5809 - Programação em C#
 
 #### Exercícios Ficha 1 - Projet-FT01
 ![alt text](https://github.com/Peleyah/Peleyah.cs/blob/master/5089-FT01-1.png "Ficha 1")
