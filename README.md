@@ -11,10 +11,13 @@
 ####Exercícios Ficha 3
 #### Exercícios Ficha 3
 ![alt text](https://github.com/Peleyah/Peleyah.cs/blob/master/5089-FT03-1.png "Ficha 3")
+![alt text](https://github.com/Peleyah/Peleyah.cs/blob/master/5089-FT03-2.png "Ficha 3")
 
 ####Exercícios Ficha 4
 #### Exercícios Ficha 4
 ![alt text](https://github.com/Peleyah/Peleyah.cs/blob/master/5089-FT04-1.png "Ficha 4")
+![alt text](https://github.com/Peleyah/Peleyah.cs/blob/master/5089-FT04-2.png "Ficha 4")
+![alt text](https://github.com/Peleyah/Peleyah.cs/blob/master/5089-FT04-3.png "Ficha 4")
 
 ####Exercícios Ficha 5
 #### Exercícios Ficha 5
